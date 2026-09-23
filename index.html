@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STORE — New Arrivals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">New Arrivals</a>
+    <a href="#">Sale</a>
+  </nav>
+  <p class="wordmark">STORE</p>
+  <div class="head-right">
+    <button class="icon-btn" title="Search">⌕</button>
+    <button class="icon-btn" title="Account">☺</button>
+    <button class="icon-btn" title="Bag">🛍<span class="cart-badge" id="cartCount">0</span></button>
+    <span class="cart-total" id="cartTotal">$0</span>
+    <button class="checkout-btn" id="checkoutBtn">💳 Checkout</button>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <h1>New Arrivals<span class="count">6 products</span></h1>
+    <p class="sort">Sort: Newest</p>
+  </div>
+
+  <div class="layout">
+    <!-- Filter sidebar -->
+    <aside class="filter-panel">
+      <h2>Filter</h2>
+      <p class="filter-label">Team</p>
+      <ul class="filter-list" id="filterList">
+        <li class="filter-item active" data-filter="all">All</li>
+        <li class="filter-item" data-filter="Real Madrid">Real Madrid</li>
+        <li class="filter-item" data-filter="Bayern Munich">Bayern Munich</li>
+      </ul>
+    </aside>
+
+    <!-- Product grid -->
+    <section class="grid" id="grid" aria-label="Product grid"></section>
+  </div>
+</main>
+
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <h3>Order summary</h3>
+    <div class="modal-row"><span>Items</span><span id="modalCount">0</span></div>
+    <div class="modal-row modal-total"><span>Total</span><span id="modalTotal">$0</span></div>
+    <div class="card-field">
+      <label>Card number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+    </div>
+    <div class="card-row">
+      <div class="card-field">
+        <label>Expiry</label>
+        <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+      </div>
+      <div class="card-field">
+        <label>CVV</label>
+        <input type="text" id="cardCvv" placeholder="123" maxlength="3">
+      </div>
+    </div>
+    <button class="pay-btn" id="payBtn">Pay now</button>
+    <button class="modal-close" id="modalClose">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
